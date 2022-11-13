@@ -41,7 +41,7 @@ export default function App() {
       <div className="forgot"> 
         <div className="remember">
           <input type='checkbox' className="checkbox"></input>
-          <label className="rememberLabel">Remember me</label>
+          <label className="rememberLabel">Remember Me</label>
         </div>
         <label className="forgotLabel">Forgot password?</label>
       </div>
