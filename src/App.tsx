@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState,createContext} from 'react'
 import './App.css';
+import LoginPage from './components/LoginPage/LoginPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './components/Home/Home';
+import { GlobalStateProvider } from "../src/components/colorContext/GlobalStateProvider";
+
+
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStateProvider>
+        <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<LoginPage />}/>
+              <Route path="/home" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+      </GlobalStateProvider>
+
     </div>
   );
 }
