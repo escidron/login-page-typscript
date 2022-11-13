@@ -43,7 +43,7 @@ export default function App() {
           <input type='checkbox' className="checkbox"></input>
           <label className="rememberLabel">Remember Me</label>
         </div>
-        <label className="forgotLabel">Forgot passwords?</label>
+        <label className="forgotLabel">Forgot Password?</label>
       </div>
       <br/>
       <input type="submit" value='Sign in' className="buttonForm"/>
